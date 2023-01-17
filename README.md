@@ -1,15 +1,17 @@
 # aid
 Authorize ios device  安装app都不需要连接到appstore去下载和购买，实现功能和爱思助手一样安装app。
 
+由于近期有使用者反映，这些依赖古老itenus版本dll文件和新版本和各种助手存在冲突，近期计划开发不依赖这些dll版本，敬请关注！
+
 
 # 使用iTunes原装dll 开发苹果助手功能
 iTunes 用的dll 和 libimobiledevice 开发有很大不同，特别里面针对权限，登录，授权等功能不是libimobiledevice所有实现的，只是详细记录一下这些功能会用到，以供查阅。
 # 环境
 
 操作系统：Windows 10
-iTunes版本：12.5.3.16 (x64)
+iTunes版本：12.1.0.71 (x86)
 手机型号：iPhone 6 plus 金色
-手机系统版本：10.1.1
+手机系统版本：12.5.6
 
 ## 目前需要的DLL
 ```
@@ -536,7 +538,7 @@ AFC服务所提供的根目录实际上是AFC2服务/var/mobile/Media目录
 1. ATHostConnectionCreateWithLibrary
 2. ATHostConnectionReadMessage
 3. ATHostConnectionSendPing
-4. ATHostConnectionSendSyncRequest
+4. ATHostConnectionSendMessage
 5. ATHostConnectionSendMetadataSyncFinished
 
 具体实现方法已经在代码中实现，请阅读代码。
